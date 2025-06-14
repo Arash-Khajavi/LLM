@@ -1,4 +1,4 @@
-name: Flask App CI
+name:  Example Workflow
 
 on: [push]
 
