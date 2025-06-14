@@ -21,7 +21,7 @@ jobs:
 
     - name: Run script
       env:
-        OPENAI_API_KEY: ${{ secrets.LLM }}
+        LLM : ${{ secrets.LLM }}
       run: |
         python LLM.py
 
