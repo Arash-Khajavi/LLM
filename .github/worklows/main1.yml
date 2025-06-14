@@ -21,7 +21,7 @@ jobs:
 
     - name: Run script
       env:
-        LLM : ${{ secrets.llm }}
+        LLM : ${{ secrets.LLM }}
       run: |
         python a.py
 
