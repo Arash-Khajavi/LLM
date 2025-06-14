@@ -1,0 +1,11 @@
+dotenv
+pydantic 
+langchain_anthropic
+langchain_openai
+langchain_core.prompts 
+langchain_core.output_parsers 
+langchain.agents
+tools 
+flask 
+os
+string
