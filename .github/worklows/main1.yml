@@ -1,27 +1,35 @@
-name: Example Workflow
+name: Flask App CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: ' 3.12.3'
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.3'
 
-    - name: Run script
-      env:
-        LLM : ${{ secrets.LLM }}
-      run: |
-        python LLM.py
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Flask app
+        env:
+          LLM: ${{ secrets.LLM }}
+          FLASK_APP: a.py  # change if your main file is not named app.py
+          FLASK_ENV: development
+        run: |
+          echo "Starting Flask app..."
+          flask run --host=0.0.0.0 --port=5000
+
 
