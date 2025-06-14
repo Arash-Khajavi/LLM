@@ -9,3 +9,20 @@ tools
 flask 
 os
 string
+langchain.tools 
+datetime
+langchain_core.utils.pydantic 
+langchain_openai.chat_models  
+langchain.agents
+# Example of a Pydantic model for the tool
+langchain_core.tools 
+pydantic 
+langchain_core.tools 
+pydantic 
+requests
+bs4 
+# Define the argument schema for the tool
+langchain_community.tools 
+langchain_community.utilities 
+langchain.tools 
+datetime 
