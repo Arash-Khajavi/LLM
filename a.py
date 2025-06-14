@@ -81,8 +81,5 @@ def IsraelGPT():
     except Exception as e:
         return "Error parsing response", e, "Raw Response - ", raw_response
  return render_template("fl.html")
-@app.route("/l")
-def ch():
-    return render_template("email.html")
 if __name__ == "__main__":
   app.run()
