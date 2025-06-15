@@ -77,10 +77,10 @@ def IsraelGPT():
         j=str(structured_response).find("sources")
 
         k=str(structured_response).find("summary")
-        return f"{str(structured_response)},{render_template("fl.html")}"
+        return f"{str(structured_response)},{render_template("fl.html", result=None)}"
     except Exception as e:
         return "Error parsing response", e, "Raw Response - ", raw_response
- return render_template("fl.html")
+ return render_template("fl.html",result=None)
 if __name__ == "__main__":
    port = int(os.environ.get("PORT", 5000))
    app.run(host="0.0.0.0", port=port)
