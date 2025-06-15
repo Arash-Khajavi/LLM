@@ -13,7 +13,7 @@ import string
 emails=[]
 j1=[]
 # k=[]
-app=Flask(__name__)
+app = Flask(__name__, template_folder='Templates')  # this is default; no need unless using custom folder
 @app.route("/",methods=["POST","GET"])
 def IsraelGPT():
  if request.method == "POST":
