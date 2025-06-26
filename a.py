@@ -12,7 +12,7 @@ import string
 emails=[]
 j1=[]
 k=[]
-app=Flask(__name__)
+app=Flask(__name__,template_folder='Templates')
 @app.route("/",methods=["POST","GET"])
 def IsraelGPT():
  if request.method == "POST":
