@@ -19,15 +19,28 @@
         <input type="submit" value="Submit">
         <input type="submit" value="Audio">
 </form>
-<div id="frame" style="width:728px; height:auto;"><iframe data-aa='2400352' src='//ad.a-ads.com/2400352?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><a style="display: block; text-align: right; font-size: 12px;" id="preview-link" href="https://aads.com/campaigns/new/?source_id=2400352&source_type=ad_unit&partner=2400352">Advertise here</a></div>
-  <p><strong>Topic:</strong> {{ result.topic }}</p>
-  <p><strong>Summary:</strong> {{ result.summary }}</p>
-  <p><strong>Output:</strong> {{ result.output }}</p>
-  <p><strong>Sources:</strong> {{ result.sources }}</p>
-  <p><strong>Tools Used:</strong> {{ result.tools_used }}</p>
-{% else %}
-  <p>No result to show yet.</p>
-{% endif %}
+    ... some html above ...
+    {% if user.is_logged_in %}
+        <p>Welcome, {{ user.name }}!</p>
+    {% else %}  <--- Show this part!
+        <!-- A-ADS code START -->
+        <script type="text/javascript">
+            <!--
+            // A-ADS code
+            (function(){var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript'; s.src = '<div id="frame" style="width:728px; height:auto;"><iframe data-aa='2400352' src='//ad.a-ads.com/2400352?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe><a style="display: block; text-align: right; font-size: 12px;" id="preview-link" href="https://aads.com/campaigns/new/?source_id=2400352&source_type=ad_unit&partner=2400352">Advertise here</a></div>'
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+            })();
+            -->
+        </script>
+        <!-- A-ADS code END -->
+        <p>Please log in to see more content.</p>
+    {% endif %} <--- And show this part!
+        <p><strong>Topic:</strong> {{ result.topic }}</p>
+        <p><strong>Summary:</strong> {{ result.summary }}</p>
+        <p><strong>Output:</strong> {{ result.output }}</p>
+        <p><strong>Sources:</strong> {{ result.sources }}</p>
+        <p><strong>Tools Used:</strong> {{ result.tools_used }}</p>
 </body>
 
 </html>
