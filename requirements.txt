@@ -1,4 +1,4 @@
-langchain 
+langchain>=0.1.15
 wikipedia 
 langchain-community 
 langchain-openai
