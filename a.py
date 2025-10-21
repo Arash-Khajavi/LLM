@@ -1,7 +1,7 @@
 import json
 import os
 from dotenv import load_dotenv
-from pydantic import BaseModel
+from langchain_core.utils.pydantic import BaseModel
 from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
