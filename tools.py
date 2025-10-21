@@ -2,7 +2,6 @@ from langchain.tools import Tool
 from datetime import datetime
 from langchain_core.utils.pydantic import BaseModel
 from langchain_openai.chat_models  import ChatOpenAI
-from langchain.agents import create_tool_calling_agent
 # Example of a Pydantic model for the tool
 from langchain_core.tools import tool
 from pydantic import BaseModel
