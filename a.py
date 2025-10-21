@@ -1,12 +1,12 @@
 import json
 import os
 from dotenv import load_dotenv
-from pydantic import BaseModel
+from langchain_core.utils.pydantic import BaseModel
 from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain.agents import create_tool_functions_agent, AgentExecutor
+from langchain.agents import create_tool_calling_agent, AgentExecutor
 from tools import save_tool, AquilaTool
 from flask import Flask,render_template,redirect,url_for,request,jsonify
 import random
