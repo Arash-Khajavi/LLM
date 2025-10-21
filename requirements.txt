@@ -1,6 +1,6 @@
-langchain>=0.1.15
+langchain>=0.1.152
 wikipedia 
-langchain-community 
+langchain-community>=0.0.24
 langchain-openai
 langchain-anthropic
 python-dotenv
