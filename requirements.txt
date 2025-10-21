@@ -3,7 +3,7 @@ python-dotenv
 Flask
 gunicorn
 langchain==0.3.27
-langchain-core==0.3.19
+langchain-core<1.0.0
 langchain-community==0.3.7
 langchain-openai==0.2.5
 pydantic==2.9.2
