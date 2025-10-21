@@ -1,12 +1,10 @@
 
-wikipedia 
-langchain-openai
-langchain-anthropic
 python-dotenv
 Flask
 gunicorn
-langchain==0.1.16
-langchain-core==0.1.52
-langchain-community==0.0.24
-pydantic==1.10.13
+langchain==0.3.27
+langchain-core==0.3.19
+langchain-community==0.3.7
+langchain-openai==0.2.5
+pydantic==2.9.2
 
