@@ -12,3 +12,6 @@ langchain_anthropic
 bs4
 requests
 datetime
+playwright
+json
+re
