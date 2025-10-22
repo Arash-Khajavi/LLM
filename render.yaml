@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: LLM
+    name: llm
     env: python
     buildCommand: |
       pip install -r requirements.txt
       python -m playwright install --with-deps
     startCommand: gunicorn a:app --workers 1 --threads 1
+
